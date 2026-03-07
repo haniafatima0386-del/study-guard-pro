@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Study Guard Pro - Smart Lockdown",
+  "version": "9.1",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": ["tabs", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://*.facebook.com/*",
+    "https://*.instagram.com/*",
+    "https://*.tiktok.com/*",
+    "https://*.google.com/*",
+    "https://docs.google.com/forms/*"
+  ]
+}

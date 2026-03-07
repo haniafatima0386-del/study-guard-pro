@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { width: 220px; padding: 15px; font-family: Arial; text-align: center; direction: rtl; }
+        input { width: 90%; padding: 8px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #d32f2f; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+    <h3>اسٹڈی گارڈ کنٹرول</h3>
+    <input type="password" id="mPass" placeholder="ماسٹر پاس ورڈ">
+    <button id="offBtn">آج کے لیے آف کریں</button>
+    <script>
+        document.getElementById('offBtn').addEventListener('click', () => {
+            if (document.getElementById('mPass').value === "1234") {
+                const endOfDay = new Date().setHours(23,59,59,999);
+                chrome.storage.local.set({ masterOffUntil: endOfDay }, () => {
+                    alert("ایکسٹینشن رات 12 بجے تک آف کر دی گئی ہے۔");
+                    window.close();
+                });
+            } else { alert("غلط پاس ورڈ!"); }
+        });
+    </script>
+</body>
+</html>
