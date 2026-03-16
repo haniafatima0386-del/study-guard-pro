@@ -1,6 +1,6 @@
 const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdRry4jsysHXvkQBZTZCAhI89DTUS0NkZvjCuNlDAvRb2mGmQ/formResponse?usp=pp_url&entry.191259753=alert";
 const blockedSites = ["youtube.com", "facebook.com", "instagram.com", "tiktok.com"];
-const PARENT_PASSWORD = "0386"; 
+const PARENT_PASSWORD = "0786"; 
 const MAX_DAILY_USES = 1;
 
 const quotes = [
